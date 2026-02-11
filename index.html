@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Valentine's Day, Amaka</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --champagne-gold: #D4AF37;
+        --deep-rose: #ff4d6d;
+      }
+      body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #fffafb;
+        cursor: default; /* Fallback for mobile */
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        -webkit-tap-highlight-color: transparent;
+      }
+      @media (min-width: 768px) {
+        body {
+          cursor: none;
+        }
+      }
+      h1, h2, h3 {
+        font-family: 'Playfair Display', serif;
+      }
+      .font-romantic {
+        font-family: 'Great Vibes', cursive;
+      }
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .flip-card-inner {
+        transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        transform-style: preserve-3d;
+      }
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      /* Ensure touch devices can trigger the flip on tap */
+      .flip-card:active .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      .flip-card-front, .flip-card-back {
+        backface-visibility: hidden;
+        border-radius: 1.5rem;
+      }
+      .flip-card-back {
+        transform: rotateY(180deg);
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .gold-glow:hover {
+        box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+      }
+      ::selection {
+        background: var(--deep-rose);
+        color: white;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #fff5f6;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--deep-rose);
+        border-radius: 10px;
+      }
+      /* Prevent horizontal scroll issues with animations */
+      .overflow-x-clip {
+        overflow-x: clip;
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.34.0",
+    "canvas-confetti": "https://esm.sh/canvas-confetti@^1.9.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
